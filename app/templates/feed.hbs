@@ -1,2 +1,8 @@
 {{outlet}}
-this is the feed page
+<h2>List of Activities</h2>
+
+<ul>
+  {{#each model as |activity|}}
+    <li><em>{{activity.title}}</em> {{activity.description}}</li>
+  {{/each}}
+</ul>
