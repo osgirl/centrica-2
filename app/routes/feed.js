@@ -1,5 +1,9 @@
 import Route from '@ember/routing/route';
 
+// TODO generate a feed component to perform GET /feed and populate model
+// then in this route use that model
+// https://guides.emberjs.com/v2.18.0/routing/specifying-a-routes-model/
+
 export default Route.extend({
   model() {
     return [
