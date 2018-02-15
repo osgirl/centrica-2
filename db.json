@@ -3,32 +3,49 @@
     {
       "id": 1,
       "timestamp": "1518615151",
-      "status": "ok",
-      "serviceAgentId": "ok",
-      "title": "Save money by switching tariff",
-      "description": "Joel visited your property today and has marked your issue as resolved",
-      "category": "ok",
-      "customerId": "ok"
+      "category": "VISIT",
+      "alertType": "COMPLETE",
+      "title": "Your engineer visited today",
+      "visitEngineer": "Joel",
+      "visitTime": "11am",
+      "issueStatus": "resolved",
+      "customerId": 101
+    },
+    {
+      "id": 4,
+      "timestamp": "1518615151",
+      "category": "VISIT",
+      "alertType": "INFO",
+      "title": "Your engineer visit is booked",
+      "visitDate": "Tuesday 3rd July",
+      "visitTime": "8am - 1pm",
+      "customerId": 101
     },
     {
       "id": 2,
       "timestamp": "1518615151",
-      "status": "ok",
-      "serviceAgentId": "ok",
+      "category": "METERREAD",
+      "alertType": "ACTIONNEEDED",
       "title": "It is time to read your metre",
-      "description": "To keeo your energy bills accurate please submit your metre reading",
-      "category": "ok",
-      "customerId": "ok"
+      "description": "To keep your energy bills accurate please submit your meter reading",
+      "customerId": 101
     },
     {
-      "id": 9,
+      "id": 3,
       "timestamp": "1518615151",
-      "status": "ok",
-      "serviceAgentId": "ok",
-      "title": "Your engineer visited today",
+      "category": "TARIFF",
+      "alertType": "INFO",
+      "title": "Save money by switching tariff",
       "description": "Looking at your recent energy usage we can see switching can save you money",
-      "category": "ok",
-      "customerId": "ok"
+      "customerId": 101
+    },
+    {
+      "id": 4,
+      "timestamp": "1518615151",
+      "category": "BILL",
+      "alertType": "ACTIONNEEDED",
+      "title": "Your energy bill is now ready",
+      "customerId": 101
     }
   ],
   "customer": {
