@@ -2,7 +2,7 @@
 <p>Welcome to your British Gas activity feed</p>
 
 {{#each model as |activity|}}
-  <p>{{activity.timestamp}}</p>
+  <p class="text-right">{{format-date activity.timestamp}}</p>
   <div class="alert">
     <span class="bgcss-icon-electricity"></span>
     <h4>{{activity.title}}</h4> 
