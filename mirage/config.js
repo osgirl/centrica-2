@@ -1,5 +1,5 @@
 export default function() {
-  this.namespace = '/api';
+  this.namespace = 'api';
 
   let feed = [
     {
@@ -68,7 +68,7 @@ export default function() {
     }
   ];
 
-  this.get('/activity-feeds', function (db, request) {
+  this.get('http://localhost:8080/api/activity-feeds', function (db, request) {
     return { data: feed };
   });
 }
