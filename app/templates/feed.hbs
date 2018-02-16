@@ -2,14 +2,16 @@
 <p>Welcome to your British Gas activity feed</p>
 
 {{#each model as |activity|}}
-  <p class="text-right">{{format-date activity.timestamp}}</p>
-  <div class="alert">
-    <span class="bgcss-icon-electricity"></span>
-    <h4>{{activity.title}}</h4> 
-    <p>{{activity.description}}</p>
-    <a class="btn btn-aem btn-primary" role="button" href="#">
+  <p class="text-right mb0">{{format-date activity.timestamp}}</p>
+  <div class="alert mt0">
+    <div style="display:flex; align-items: center;">
+      <span class="bgcss-icon-{{icon-type activity.category}} pull-left" style="font-size:70px;"></span>
+      <h4 class="mb1">{{activity.title}}</h4>
+    </div>
+    <p>{{{activity.description}}}</p>
+    <a class="btn btn-aem btn-primary mt2" role="button" href="#">
         <i class="fa fa-angle-right"></i>Find out more
     </a>
-    <a class="btn btn-aem btn-tertiary" role="button" href="#">Need help?</a>
+    <a class="btn btn-aem btn-tertiary mt2" role="button" href="#">Need help?</a>
   </div>
 {{/each}}
