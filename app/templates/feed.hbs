@@ -4,14 +4,14 @@
 {{#each model as |activity|}}
   <p class="text-right mb0">{{format-date activity.timestamp}}</p>
   <div class="alert mt0">
+    
     <div style="display:flex; align-items: center;">
       <span class="bgcss-icon-{{icon-type activity.category}} pull-left" style="font-size:70px;"></span>
       <h4 class="mb1">{{activity.title}}</h4>
     </div>
+
     <p>{{{activity.description}}}</p>
-    <a class="btn btn-aem btn-primary mt2" role="button" href="#">
-        <i class="fa fa-angle-right"></i>Find out more
-    </a>
-    <a class="btn btn-aem btn-tertiary mt2" role="button" href="#">Need help?</a>
+    {{{buttons category=activity.category alertType=activity.alert-type}}}
+
   </div>
 {{/each}}
