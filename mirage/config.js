@@ -1,5 +1,7 @@
 export default function() {
-  this.namespace = 'api';
+    this.urlPrefix = 'http://localhost:8080';
+    this.host = 'http://localhost:8080';
+    this.namespace = 'api';
 
   let feed = [
     {
@@ -68,7 +70,12 @@ export default function() {
     }
   ];
 
-  this.get('http://localhost:8080/api/activity-feeds', function (db, request) {
-    return { data: feed };
+  this.get('/activity-feeds', function (db, request) {
+    console.log('db', db); 
+    console.log('request', request)
+    // return { data: db.activityFeeds };
+    var attrs = JSON.parse(request.requestBody).activityFeeds;
+    var user = db.users.insert(attrs);
+    return user;
   });
 }

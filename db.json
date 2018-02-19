@@ -6,6 +6,7 @@
       "category": "VISIT",
       "alert-type": "COMPLETE",
       "title": "Your engineer visited today",
+      "description": "<strong>Joel</strong> visited your property at <strong>11am</strong> and has marked your issue as <strong>resolved</strong>",
       "visit-engineer": "Joel",
       "visit-time": "11am",
       "issueStatus": "resolved",
