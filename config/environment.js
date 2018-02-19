@@ -2,6 +2,13 @@
 
 module.exports = function(environment) {
   let ENV = {
+    moment: {
+      // Options:
+      // 'all' - all years, all timezones
+      // '2010-2020' - 2010-2020, all timezones
+      // 'none' - no data, just timezone API
+      includeTimezone: 'all'
+    },
     modulePrefix: 'centrica',
     environment,
     rootURL: '/',

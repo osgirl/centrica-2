@@ -1,9 +1,9 @@
 export default function() {
-    this.urlPrefix = 'http://localhost:8080';
-    this.host = 'http://localhost:8080';
-    this.namespace = 'api';
+  this.urlPrefix = 'http://localhost:8080';
+  this.host = 'http://localhost:8080';
+  this.namespace = 'api';
 
-  let feed = [
+  const feed = [
     {
       type: 'activity-feed',
       id: 1,
@@ -71,8 +71,8 @@ export default function() {
   ];
 
   this.get('/activity-feeds', function (db, request) {
-    console.log('db', db); 
-    console.log('request', request)
+    //console.log('db', db); 
+    //console.log('request', request)
     // return { data: db.activityFeeds };
     var attrs = JSON.parse(request.requestBody).activityFeeds;
     var user = db.users.insert(attrs);
