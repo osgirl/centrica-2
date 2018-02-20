@@ -11,7 +11,7 @@ export function buttons(params, { category, alertType }) {
       btnText = 'Change booking'
     } 
     return (
-      `<a class="btn btn-aem ${btnClass} mt2" role="button" href="#">
+      `<a class="btn btn-aem ${btnClass} mt2 pull-right" role="button" href="#">
         <i class="fa fa-angle-right"></i>${btnText}
       </a>`
     );
@@ -31,10 +31,12 @@ export function buttons(params, { category, alertType }) {
     }
 
     return (
-      `<a class="btn btn-aem btn-primary mt2" role="button" href="#">
+      `<a class="btn btn-aem btn-primary mt2 pull-right" role="button" href="#">
         <i class="fa fa-angle-right"></i>${btnPrimaryText}
       </a>
-      <a class="btn btn-aem btn-tertiary mt2" role="button" href="#">${btnSecondaryText}</a>`
+      <a class="btn btn-aem btn-tertiary mt2 pull-left" role="button" href="#">
+        <i class="fa fa-angle-right"></i>${btnSecondaryText}
+      </a>`
     );
   }
   if(alertType === 'COMPLETE') {
