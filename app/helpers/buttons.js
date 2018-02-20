@@ -11,7 +11,7 @@ export function buttons(params, { category, alertType }) {
       btnText = 'Change booking'
     } 
     return (
-      `<a class="btn btn-aem btn-${btnClass} mt2" role="button" href="#">
+      `<a class="btn btn-aem ${btnClass} mt2" role="button" href="#">
         <i class="fa fa-angle-right"></i>${btnText}
       </a>`
     );

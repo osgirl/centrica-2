@@ -18,6 +18,7 @@
       "category": "VISIT",
       "alert-type": "INFO",
       "title": "Your engineer visit is booked",
+      "description": "An engineer will visit your property on <strong>Tuesday 3rd July</strong> between <strong>8am - 1 pm</strong>. An engineer will call on the day to confirm a time slot",
       "visit-date": "Tuesday 3rd July",
       "visit-time": "8am - 1pm",
       "customer-id": 101
@@ -27,7 +28,7 @@
       "timestamp": "1518615151",
       "category": "METERREAD",
       "alert-type": "ACTIONNEEDED",
-      "title": "It is time to read your metre",
+      "title": "It is time to read your meter",
       "description": "To keep your energy bills accurate please submit your meter reading",
       "customer-id": 101
     },
