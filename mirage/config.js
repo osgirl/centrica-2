@@ -3,6 +3,9 @@ export default function() {
   this.host = 'http://localhost:8080';
   this.namespace = 'api';
 
+
+
+  /*
   const feed = [
     {
       type: 'activity-feed',
@@ -69,6 +72,7 @@ export default function() {
       }
     }
   ];
+  */
 
   this.get('/activity-feeds', function (db, request) {
     //console.log('db', db); 
