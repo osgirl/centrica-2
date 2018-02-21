@@ -1,12 +1,6 @@
 export default function() {
-  this.urlPrefix = 'http://localhost:8080';
-  this.host = 'http://localhost:8080';
-  this.namespace = 'api';
 
-
-
-  /*
-  const feed = [
+  let feed = [
     {
       type: 'activity-feed',
       id: 1,
@@ -18,7 +12,6 @@ export default function() {
         "visit-engineer": "Joel",
         "visit-time": "11am",
         "issue-status": "resolved",
-        "description": "<strong>Joel</strong> visited your property at <strong>11am</strong> and has marked your issue as <strong>resolved</strong>",
         "customer-id": 101
       }
     },
@@ -32,7 +25,6 @@ export default function() {
         "title": "Your engineer visit is booked",
         "visit-date": "Tuesday 3rd July",
         "visit-time": "8am - 1pm",
-        "description": "An engineer will visit your property on <strong>Tuesday 3rd July</strong> between <strong>8am-1pm</strong>. The engineer will call on the day to confirm a time slot.",
         "customerId": 101
       }
     },
@@ -72,14 +64,8 @@ export default function() {
       }
     }
   ];
-  */
 
   this.get('/activity-feeds', function (db, request) {
-    //console.log('db', db); 
-    //console.log('request', request)
-    // return { data: db.activityFeeds };
-    var attrs = JSON.parse(request.requestBody).activityFeeds;
-    var user = db.users.insert(attrs);
-    return user;
+    return { data: feed };
   });
 }
