@@ -31,14 +31,13 @@ export function buttons(params, { category, alertType }) {
     if(category === 'BILL') {
       btnPrimaryText = 'Pay'
       btnSecondaryText = 'How to read your bill'
-    }
-    if(category === 'METERREAD') {
+    } else if(category === 'METERREAD') {
       btnPrimaryText = 'Send reading';
       btnSecondaryText = 'Need help?';
     }
 
     return (
-      `<a class="btn btn-aem btn-primary mt2 pull-right" role="button" href="#">
+      `<a class="btn btn-aem btn-primary mt2 pull-right text-bold" role="button" href="#">
         ${btnPrimaryText}
       </a>
       <a class="btn btn-aem btn-tertiary mt2 pull-left" role="button" href="#">
