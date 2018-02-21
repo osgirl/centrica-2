@@ -1,71 +1,45 @@
-export default function() {
+export default function () {
 
-  let feed = [
-    {
-      type: 'activity-feed',
-      id: 1,
-      attributes: {
+  let json = {
+    "data": [{
+      "type": "notification",
+      "id": "1",
+      "attributes": {
         "timestamp": "1518615151",
-        "category": "VISIT",
-        "alert-type": "COMPLETE",
-        "title": "Your engineer visited today",
-        "visit-engineer": "Joel",
-        "visit-time": "11am",
-        "issue-status": "resolved",
-        "customer-id": 101
+        "category": "visit",
+        "engineer": "Joel",
+        "meta": {
+          "booked_time": "2018-01-09T09:13:42+0000"
+        },
+        "steps": [{
+          "time": "1518615151",
+          "state": "resolved"
+        },
+        {
+          "time": "1518615151",
+          "state": "confirmed"
+        },
+        {
+          "time": "1518615151",
+          "state": "booked"
+        }]
+      },
+      "links": {
+        "self": "https://api.britishgas.co.uk/notifications/1"
+      },
+      "relationships": {
+        "customer": {
+          "links": {
+            "self": "https://api.britishgas.co.uk/notifications/1/relationships/customer",
+            "related": "https://api.britishgas.co.uk/articles/1/customer"
+          },
+          "data": { "type": "customers", "id": "1337" }
+        }
       }
-    },
-    {
-      type: 'activity-feed',
-      id: 2,
-      attributes: {
-        "timestamp": "1518615151",
-        "category": "VISIT",
-        "alert-type": "INFO",
-        "title": "Your engineer visit is booked",
-        "visit-date": "Tuesday 3rd July",
-        "visit-time": "8am - 1pm",
-        "customerId": 101
-      }
-    },
-    {
-      type: 'activity-feed',
-      id: 3,
-      attributes: {
-        "timestamp": "1518615151",
-        "category": "METERREAD",
-        "alert-type": "ACTIONNEEDED",
-        "title": "It is time to read your metre",
-        "description": "To keep your energy bills accurate please submit your meter reading",
-        "customer-id": 101
-      }
-    },
-    {
-      type: 'activity-feed',
-      id: 4,
-      attributes: {
-        "timestamp": "1518615151",
-        "category": "TARIFF",
-        "alert-type": "INFO",
-        "title": "Save money by switching tariff",
-        "description": "Looking at your recent energy usage we can see switching can save you money",
-        "customer-id": 101
-      }
-    },
-    {
-      type: 'activity-feed',
-      id: 5,
-      attributes: {
-        "timestamp": "1518615151",
-        "category": "BILL",
-        "alert-type": "ACTIONNEEDED",
-        "title": "Your energy bill is now ready",
-        "customer-id": 101
-      }
-    }
-  ];
+    }]
+  };
 
-  this.get('/activity-feeds', function (db, request) {
-    return { data: feed };
+  this.get('/notifications', function (db, request) {
+    return json;
   });
 }

@@ -3,6 +3,6 @@ import $ from 'jquery';
 
 export default Route.extend({
   model() {
-    return this.get('store').findAll('activity-feed');
+    return this.get('store').findAll('notification');
   }
 });
