@@ -1,6 +1,6 @@
 export default function () {
 
-  let json = {
+  const json = {
     "data": [{
       "type": "notification",
       "id": "1",
@@ -39,7 +39,7 @@ export default function () {
     }]
   };
 
-  this.get('/notifications', function (db, request) {
+  this.get('/notifications', function () {
     return json;
   });
 }
