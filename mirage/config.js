@@ -39,7 +39,7 @@ export default function () {
     }]
   };
 
-  this.get('/notifications', function () {
+  this.get('http://localhost:8080/notifications', function () {
     return json;
   });
 }
