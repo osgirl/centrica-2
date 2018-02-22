@@ -4,6 +4,14 @@
   <div style="display:flex; align-items: center;">
     <span class="bgcss-icon-{{icon-type notification.category}} text-muted pull-left" style="font-size:70px;"></span>
     <h4 class="mb1 ml1 mr8" style="font-weight: bold">{{notification.title}}</h4>
+    <ul>
+      <li>notification.category: {{notification.category}}</li>
+      <li>notification.type: {{notification.type}}</li>
+      <li>notification.nick: {{notification.nick}}</li>
+      <li>notification.engineer: {{notification.engineer}}</li>
+      <li>notification.meta: {{notification.meta}}</li>
+      <li>notification.meta.booked_time: {{notification.meta.booked_time}}</li>
+    </ul>
   </div>
 
   <p class="mt2 mb1">{{{notification.engineer}}} visited today</p>
