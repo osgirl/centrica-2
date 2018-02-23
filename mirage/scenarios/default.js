@@ -10,8 +10,21 @@ export default function(server) {
 
   const notifications = [];
   
-  notifications.push(server.create('notification', customers[0]));
+  const notification1 = { category: 'some cat', timestamp: 1519378449000, 'alert-type': 'rock' };
+  notifications.push(server.create('notification', notification1 ));
+
   notifications.push(server.create('notification', employees[1]));
   notifications.push(server.create('notification', customers[2], employees[2]));
 
 }
+
+/*
+  customers: DS.belongsTo('customer'),
+  employees: DS.belongsTo('employee'),
+  timestamp: DS.attr('number'),
+  category: DS.attr('string'),
+  'alert-type': DS.attr('string'),
+  nick: DS.attr('string'),
+  meta: DS.attr(),
+  engineer: DS.attr('string')
+*/
