@@ -12,8 +12,8 @@ export default function(server) {
     category: customers[0].id,
     timestamp: 1519378449000,
     'alert-type': 'rock',
-    employeeId: server.create('employee').id,
-    customerId: customers[0].id
+    //employeeId: server.create('employee').id,
+    //customerId: customers[0].id
   };
 
   server.create('notification', notification);
