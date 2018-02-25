@@ -5,14 +5,10 @@ export default function(server) {
     This data will not be loaded in your tests.
   */
 
-  //const customers = server.createList('customer', 10);
-  //const employees = server.createList('employee', 10);
-
   const notification = {
-    category: 'cat1',
     timestamp: 1519378449000,
     'alert-type': 'rock',
-    employees: server.create('employee', {}),
+    employees: server.create('employee'),
     customers: server.create('customer')
   };
 

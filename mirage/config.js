@@ -1,14 +1,5 @@
 export default function () {
 
-  /*
-  this.uriPath = 'http://localhost:8080/';
-  this.urlPath = 'http://localhost:8080/';
-  this.uri = 'http://localhost:8080/';
-  this.url = 'http://localhost:8080/';
-  this.host = 'http://localhost:8080/';
-  this.namespace = 'http://localhost:8080/';
-  */
-
   this.get('/notifications', (schema, request) => {
     return schema.notifications.all();
   });
@@ -19,5 +10,13 @@ export default function () {
 
   this.get('/employees', (schema, request) => {
     return schema.employees.all();
+  });
+
+  this.get('/notifications/:id');
+  this.get('/customers/:id');
+  this.get('/employees/:id');
+
+  this.get('/employees/notifications', (schema, request) => {
+    return schema.employees.notifications.all();
   });
 }
