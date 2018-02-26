@@ -1,21 +1,21 @@
 import { helper } from '@ember/component/helper';
 
-export function buttons(params, { category, alertType }) {
-  
-  if(alertType === 'INFO') {
+export function buttons(params, {category, alertType}) {
+
+  if (alertType === 'INFO') {
     let btnClass = 'btn-secondary';
     let btnText = 'Find out more';
 
-    if(category === 'VISIT') {
+    if (category === 'VISIT') {
       btnClass = 'btn-primary';
-      btnText = 'Change booking'
+      btnText = 'Change booking';
 
       return (
         `<a class="btn btn-aem ${btnClass} mt2 pull-right text-bold" role="button" href="#">
           ${btnText}
         </a>`
       );
-    } 
+    }
 
     return (
       `<a class="btn btn-aem ${btnClass} mt2 pull-right text-bold" role="button" href="#">
@@ -24,14 +24,14 @@ export function buttons(params, { category, alertType }) {
     );
   }
 
-  if(alertType === 'ACTIONNEEDED') {
+  if (alertType === 'ACTIONNEEDED') {
     let btnPrimaryText = '';
     let btnSecondaryText = '';
 
-    if(category === 'BILL') {
-      btnPrimaryText = 'Pay'
-      btnSecondaryText = 'How to read your bill'
-    } else if(category === 'METERREAD') {
+    if (category === 'BILL') {
+      btnPrimaryText = 'Pay';
+      btnSecondaryText = 'How to read your bill';
+    } else if (category === 'METERREAD') {
       btnPrimaryText = 'Send reading';
       btnSecondaryText = 'Need help?';
     }
@@ -46,7 +46,7 @@ export function buttons(params, { category, alertType }) {
     );
   }
 
-  if(alertType === 'COMPLETE') {
+  if (alertType === 'COMPLETE') {
     return `
 <!-- Add icon library -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">

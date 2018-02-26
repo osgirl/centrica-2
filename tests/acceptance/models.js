@@ -3,7 +3,7 @@ import moduleForAcceptance from 'centrica/tests/helpers/module-for-acceptance';
 
 moduleForAcceptance('Acceptance | list feed');
 
-test("I can view the customers", function() {
+test('I can view the customers', function() {
   let authors = server.createList('customer', 3);
 
   visit('/customers');
@@ -14,7 +14,7 @@ test("I can view the customers", function() {
   });
 });
 
-test("I can view the notifications", function() {
+test('I can view the notifications', function() {
   //let authors = server.createList('notification', 3);
 
   visit('/notifications');
@@ -27,7 +27,7 @@ test("I can view the notifications", function() {
   */
 });
 
-test("I can view the employees", function() {
+test('I can view the employees', function() {
   let employees = server.createList('employee', 3);
 
   visit('/employees');

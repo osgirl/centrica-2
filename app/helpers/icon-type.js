@@ -1,21 +1,21 @@
-import { helper } from '@ember/component/helper';
+import {helper} from '@ember/component/helper';
 
 export function iconType(category) {
 
-  if(category.toString() === 'VISIT') {
-    return 'boiler'
+  if (category.toString() === 'VISIT') {
+    return 'boiler';
   }
-  switch(category.toString()) {
+  switch (category.toString()) {
     case 'VISIT':
-      return 'boiler'
+      return 'boiler';
     case 'METERREAD':
-      return 'meter'
+      return 'meter';
     case 'BILL':
-      return 'pound-sign'
+      return 'pound-sign';
     default:
-        return 'bell'
-} 
-  
+      return 'bell';
+  }
+
 }
 
 export default helper(iconType);
