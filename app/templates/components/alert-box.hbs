@@ -1,17 +1,14 @@
-<p class="mb1">{{format-date notification.timestamp}}</p>
+<p class="mb1" style="text-align: right">{{format-date notification.timestamp}}</p>
 <div class="alert mt0 mb8 pa3" style="padding-bottom: 20px">
 
   <div style="display:flex; align-items: center;">
     <span class="bgcss-icon-{{icon-type notification.category}} text-muted pull-left" style="font-size:70px;"></span>
     <h4 class="mb1 ml1 mr8" style="font-weight: bold">{{notification.title}}</h4>
     <ul>
-      <li>notification.id: {{notification.id}}</li>
-      <li>notification.category: {{notification.category}}</li>
-      <li>notification.type: {{notification.type}}</li>
-      <li>notification.nick: {{notification.nick}}</li>
-      <li>notification.engineer: {{notification.engineer}}</li>
-      <li>notification.meta: {{notification.meta}}</li>
-      <li>notification.meta.booked_time: {{notification.meta.booked_time}}</li>
+      <li>body: {{notification.body}}</li>
+      <li>%BOOKEDTIME%: {{notification.booked_time}}</li>
+      <li>%ENGINEER%: {{notification.employee.firstName}}</li>
+      <li>%BOOKEDSTATUS%: {{notification.booked_status}}</li>
     </ul>
   </div>
 

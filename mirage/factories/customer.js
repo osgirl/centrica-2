@@ -6,5 +6,5 @@ export default Factory.extend({
   },
   lastName() {
     return faker.name.lastName();
-  },
+  }
 });

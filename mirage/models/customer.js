@@ -2,6 +2,4 @@ import { Model, hasMany } from 'ember-cli-mirage';
 
 export default Model.extend({
   notifications: hasMany()
-  //firstName: DS.attr('string'),
-  //lastName: DS.attr('string'),
 });

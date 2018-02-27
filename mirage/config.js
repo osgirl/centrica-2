@@ -1,14 +1,14 @@
 export default function () {
 
-  this.get('/notifications', (schema, request) => {
+  this.get('/notifications', (schema) => {
     return schema.notifications.all();
   });
 
-  this.get('/customers', (schema, request) => {
+  this.get('/customers', (schema) => {
     return schema.customers.all();
   });
 
-  this.get('/employees', (schema, request) => {
+  this.get('/employees', (schema) => {
     return schema.employees.all();
   });
 
@@ -16,7 +16,7 @@ export default function () {
   this.get('/customers/:id');
   this.get('/employees/:id');
 
-  this.get('/employees/notifications', (schema, request) => {
+  this.get('/employees/notifications', (schema) => {
     return schema.employees.notifications.all();
   });
 }

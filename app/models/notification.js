@@ -1,12 +1,12 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-  customers: DS.belongsTo('customer'),
-  employees: DS.belongsTo('employee'),
+  customer: DS.belongsTo('customer'),
+  employee: DS.belongsTo('employee'),
   timestamp: DS.attr('number'),
   category: DS.attr('string'),
-  'alert-type': DS.attr('string'),
-  nick: DS.attr('string'),
-  meta: DS.attr(),
-  engineer: DS.attr('string')
+  booked_time: DS.attr('number'),
+  booked_status: DS.attr('string'),
+  title: DS.attr('string'),
+  body: DS.attr('string')
 });
