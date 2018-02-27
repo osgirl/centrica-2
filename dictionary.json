@@ -1,0 +1,13 @@
+{
+  "dictionary": [
+    {
+      "id": "VISIT1", // statuscode
+      "type": "dictionary-item",
+      "attributes": {
+        "title": "Your visit is booked, yeah",
+        "ctaText": "Change booking",
+        "ctaLink": "#"
+      }
+    }
+  ]
+}

@@ -15,7 +15,6 @@ export function iconType(category) {
     default:
       return 'bell';
   }
-
 }
 
 export default helper(iconType);

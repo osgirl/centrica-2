@@ -47,4 +47,6 @@ export default function(server) {
 
   server.create('notification', notification3);
 
+  server.loadFixtures();
+
 }

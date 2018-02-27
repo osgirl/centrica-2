@@ -2,11 +2,13 @@
 <div class="alert mt0 mb8 pa3" style="padding-bottom: 20px">
 
   <div style="display:flex; align-items: center;">
-    <span class="bgcss-icon-{{icon-type notification.category}} text-muted pull-left" style="font-size:70px;"></span>
-    <h4 class="mb1 ml1 mr8" style="font-weight: bold">{{notification.title}}</h4>
-    {{notification.body}}
+    {{!-- <span class="bgcss-icon-{{icon-type notification.category}} text-muted pull-left" style="font-size:70px;"></span> --}}
+    <h4 class="mb1 ml1 mr8" style="font-weight: bold">{{dictionary.title}}</h4>
+    {{dictionary.body}}
     <!--
     <ul>
+      <li>body: {{dictionary.description}}</li>
+      <li>title: {{dictionary.title}}</li>
       <li>%BOOKEDTIME%: {{notification.booked_time}}</li>
       <li>%ENGINEER%: {{notification.employee.firstName}}</li>
       <li>%BOOKEDSTATUS%: {{notification.booked_status}}</li>
