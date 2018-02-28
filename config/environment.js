@@ -23,10 +23,10 @@ module.exports = function(environment) {
         Date: false
       }
     },
-
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+      API_HOST: 'http://localhost:8080/'
     }
   };
 
@@ -39,6 +39,7 @@ module.exports = function(environment) {
     ENV['ember-cli-mirage'] = {
       enabled: true
     };
+    ENV.APP.API_HOST = '';
   }
 
   if (environment === 'test') {
@@ -54,6 +55,7 @@ module.exports = function(environment) {
     ENV['ember-cli-mirage'] = {
       enabled: false
     };
+    ENV.APP.API_HOST = 'http://localhost:8080/';
   }
 
   if (environment === 'production') {
